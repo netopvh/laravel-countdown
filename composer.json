@@ -1,0 +1,57 @@
+{
+    "name": "creativemobile/laravel-countdown",
+    "type": "library",
+    "description": "Provide an easy class easy way to get the time difference between two dates, with an extra bonus trait for eloquent",
+    "keywords": [
+        "countdown",
+        "time",
+        "dates",
+        "elapsed",
+        "until"
+    ],
+     "license": "MIT",
+    "authors": [
+        {
+            "name": "Angelo Neto",
+            "email": "netopvh@gmail.com"
+        }
+    ],
+    "require": {
+      "php": "^7.4 || ^8.0 || 8.1",
+        "ext-bcmath": "*",
+        "nesbot/carbon": "^2.0",
+        "illuminate/support": "6.* || 7.* || 8.* || 9.*",
+        "illuminate/container": "^6.0 || ^7.0 || ^8.0 || ^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "~4.0||~5.0",
+        "squizlabs/php_codesniffer": "^2.3",
+        "nesbot/carbon": "^2.0",
+        "mockery/mockery": "dev-master@dev"
+      },
+    "autoload": {
+        "psr-4": {
+            "CreativeMobile\\LaravelCountdown\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "CreativeMobile\\LaravelCountdown\\CountdownServiceProvider"
+          ],
+          "aliases": {
+            "Countdown": "CreativeMobile\\LaravelCountdown\\Facades\\CountdownFacade"
+          }
+        }
+    },
+    "config": {
+      "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
